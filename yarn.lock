@@ -9161,13 +9161,9 @@ moment@2.19.3:
   version "2.19.3"
   resolved "https://registry.npmjs.org/moment/-/moment-2.19.3.tgz"
 
-"moment@>= 2.9.0", moment@>=1.6.0, moment@^2.13.0:
-  version "2.20.1"
-  resolved "https://registry.npmjs.org/moment/-/moment-2.20.1.tgz"
-
-moment@^2.24.0:
-  version "2.27.0"
-  resolved "https://registry.npmjs.org/moment/-/moment-2.27.0.tgz"
+"moment@>= 2.9.0", moment@>=1.6.0, moment@^2.13.0, moment@^2.24.0:
+  version "2.29.4"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.4.tgz#3dbe052889fe7c1b2ed966fcb3a77328964ef108"
 
 mongodb-core@2.1.18:
   version "2.1.18"

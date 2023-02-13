@@ -2731,17 +2731,13 @@ acorn-walk@^7.1.1:
 
 acorn-walk@^8.2.0:
   version "8.2.0"
-  resolved "https://registry.npmjs.org/acorn-walk/-/acorn-walk-8.2.0.tgz"
+  resolved "https://registry.yarnpkg.com/acorn-walk/-/acorn-walk-8.2.0.tgz#741210f2e2426454508853a2f44d0ab83b7f69c1"
 
 acorn@^3.0.4:
   version "3.3.0"
   resolved "https://registry.npmjs.org/acorn/-/acorn-3.3.0.tgz"
 
-acorn@^5.4.0:
-  version "5.4.1"
-  resolved "https://registry.npmjs.org/acorn/-/acorn-5.4.1.tgz"
-
-acorn@^5.5.3:
+acorn@^5.4.0, acorn@^5.5.3:
   version "5.7.4"
   resolved "https://registry.npmjs.org/acorn/-/acorn-5.7.4.tgz"
 
@@ -2753,13 +2749,9 @@ acorn@^7.1.1:
   version "7.4.1"
   resolved "https://registry.npmjs.org/acorn/-/acorn-7.4.1.tgz"
 
-acorn@^8.2.4:
-  version "8.7.0"
-  resolved "https://registry.npmjs.org/acorn/-/acorn-8.7.0.tgz"
-
-acorn@^8.4.1, acorn@^8.5.0, acorn@^8.7.0:
-  version "8.7.1"
-  resolved "https://registry.npmjs.org/acorn/-/acorn-8.7.1.tgz"
+acorn@^8.2.4, acorn@^8.4.1, acorn@^8.5.0, acorn@^8.7.0:
+  version "8.8.2"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.8.2.tgz#1b2f25db02af965399b9776b0c2c391276d37c4a"
 
 adal-node@0.2.1:
   version "0.2.1"
@@ -12676,8 +12668,8 @@ vinyl@^2.0.1, vinyl@^2.2.0:
     replace-ext "^1.0.0"
 
 vm2@^3.9.8:
-  version "3.9.9"
-  resolved "https://registry.npmjs.org/vm2/-/vm2-3.9.9.tgz"
+  version "3.9.14"
+  resolved "https://registry.yarnpkg.com/vm2/-/vm2-3.9.14.tgz#964042b474cf1e6e4f475a39144773cdb9deb734"
   dependencies:
     acorn "^8.7.0"
     acorn-walk "^8.2.0"

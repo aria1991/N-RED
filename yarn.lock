@@ -9256,8 +9256,8 @@ mkdirp@^1.0.3, mkdirp@^1.0.4:
   resolved "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz"
 
 moment-timezone@^0.5.21:
-  version "0.5.31"
-  resolved "https://registry.npmjs.org/moment-timezone/-/moment-timezone-0.5.31.tgz"
+  version "0.5.40"
+  resolved "https://registry.yarnpkg.com/moment-timezone/-/moment-timezone-0.5.40.tgz#c148f5149fd91dd3e29bf481abc8830ecba16b89"
   dependencies:
     moment ">= 2.9.0"
 
@@ -9265,13 +9265,9 @@ moment@2.19.3:
   version "2.19.3"
   resolved "https://registry.npmjs.org/moment/-/moment-2.19.3.tgz"
 
-"moment@>= 2.9.0", moment@>=1.6.0, moment@^2.13.0:
-  version "2.20.1"
-  resolved "https://registry.npmjs.org/moment/-/moment-2.20.1.tgz"
-
-moment@^2.24.0:
-  version "2.27.0"
-  resolved "https://registry.npmjs.org/moment/-/moment-2.27.0.tgz"
+"moment@>= 2.9.0", moment@>=1.6.0, moment@^2.13.0, moment@^2.24.0:
+  version "2.29.4"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.4.tgz#3dbe052889fe7c1b2ed966fcb3a77328964ef108"
 
 mongodb-core@2.1.18:
   version "2.1.18"

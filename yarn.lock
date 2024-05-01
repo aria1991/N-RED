@@ -92,7 +92,13 @@
   dependencies:
     tslib "^2.2.0"
 
-"@azure/core-auth@^1.1.4", "@azure/core-auth@^1.3.0", "@azure/core-auth@^1.4.0":
+"@azure/abort-controller@^2.0.0":
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@azure/abort-controller/-/abort-controller-2.1.2.tgz#42fe0ccab23841d9905812c58f1082d27784566d"
+  dependencies:
+    tslib "^2.6.2"
+
+"@azure/core-auth@^1.3.0", "@azure/core-auth@^1.4.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@azure/core-auth/-/core-auth-1.4.0.tgz#6fa9661c1705857820dbc216df5ba5665ac36a9e"
   dependencies:
@@ -111,6 +117,25 @@
     "@azure/logger" "^1.0.0"
     tslib "^2.2.0"
 
+"@azure/core-http@^3.0.2":
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/@azure/core-http/-/core-http-3.0.4.tgz#024b2909bbc0f2fce08c74f97a21312c4f42e922"
+  dependencies:
+    "@azure/abort-controller" "^1.0.0"
+    "@azure/core-auth" "^1.3.0"
+    "@azure/core-tracing" "1.0.0-preview.13"
+    "@azure/core-util" "^1.1.1"
+    "@azure/logger" "^1.0.0"
+    "@types/node-fetch" "^2.5.0"
+    "@types/tunnel" "^0.0.3"
+    form-data "^4.0.0"
+    node-fetch "^2.6.7"
+    process "^0.11.10"
+    tslib "^2.2.0"
+    tunnel "^0.0.6"
+    uuid "^8.3.0"
+    xml2js "^0.5.0"
+
 "@azure/core-rest-pipeline@^1.1.0", "@azure/core-rest-pipeline@^1.9.1":
   version "1.10.3"
   resolved "https://registry.yarnpkg.com/@azure/core-rest-pipeline/-/core-rest-pipeline-1.10.3.tgz#7603afd71ff3c290351dbeeab2c814832e47b8ef"
@@ -125,6 +150,13 @@
     https-proxy-agent "^5.0.0"
     tslib "^2.2.0"
 
+"@azure/core-tracing@1.0.0-preview.13":
+  version "1.0.0-preview.13"
+  resolved "https://registry.yarnpkg.com/@azure/core-tracing/-/core-tracing-1.0.0-preview.13.tgz#55883d40ae2042f6f1e12b17dd0c0d34c536d644"
+  dependencies:
+    "@opentelemetry/api" "^1.0.1"
+    tslib "^2.2.0"
+
 "@azure/core-tracing@^1.0.0", "@azure/core-tracing@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@azure/core-tracing/-/core-tracing-1.0.1.tgz#352a38cbea438c4a83c86b314f48017d70ba9503"
@@ -137,6 +169,13 @@
   dependencies:
     "@azure/abort-controller" "^1.0.0"
     tslib "^2.2.0"
+
+"@azure/core-util@^1.1.1":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@azure/core-util/-/core-util-1.9.0.tgz#469afd7e6452d5388b189f90d33f7756b0b210d1"
+  dependencies:
+    "@azure/abort-controller" "^2.0.0"
+    tslib "^2.6.2"
 
 "@azure/identity@^2.0.4":
   version "2.1.0"
@@ -165,25 +204,15 @@
   dependencies:
     tslib "^2.2.0"
 
-"@azure/ms-rest-js@^2.6.1":
-  version "2.6.6"
-  resolved "https://registry.yarnpkg.com/@azure/ms-rest-js/-/ms-rest-js-2.6.6.tgz#a2ae4a515565ae1b73729b52b25875853bb3240a"
-  dependencies:
-    "@azure/core-auth" "^1.1.4"
-    abort-controller "^3.0.0"
-    form-data "^2.5.0"
-    node-fetch "^2.6.7"
-    tough-cookie "^3.0.1"
-    tslib "^1.10.0"
-    tunnel "0.0.6"
-    uuid "^8.3.2"
-    xml2js "^0.5.0"
-
 "@azure/msal-browser@^2.26.0":
   version "2.35.0"
   resolved "https://registry.yarnpkg.com/@azure/msal-browser/-/msal-browser-2.35.0.tgz#39b553f5da140d5d16bf90e0d92f1bcc6f0d61d3"
   dependencies:
     "@azure/msal-common" "^12.0.0"
+
+"@azure/msal-common@13.3.1":
+  version "13.3.1"
+  resolved "https://registry.yarnpkg.com/@azure/msal-common/-/msal-common-13.3.1.tgz#012465bf940d12375dc47387b754ccf9d6b92180"
 
 "@azure/msal-common@^12.0.0":
   version "12.0.0"
@@ -193,11 +222,11 @@
   version "7.6.0"
   resolved "https://registry.yarnpkg.com/@azure/msal-common/-/msal-common-7.6.0.tgz#b52e97ef540275f72611cff57937dfa0b34cdcca"
 
-"@azure/msal-node@^1.10.0":
-  version "1.17.0"
-  resolved "https://registry.yarnpkg.com/@azure/msal-node/-/msal-node-1.17.0.tgz#fa7bba155719a7e26ac6e8d4941dd56e807e458a"
+"@azure/msal-node@^1.10.0", "@azure/msal-node@^1.18.4":
+  version "1.18.4"
+  resolved "https://registry.yarnpkg.com/@azure/msal-node/-/msal-node-1.18.4.tgz#c921b0447c92fb3b0cb1ebf5a9a76fcad2ec7c21"
   dependencies:
-    "@azure/msal-common" "^12.0.0"
+    "@azure/msal-common" "13.3.1"
     jsonwebtoken "^9.0.0"
     uuid "^8.3.0"
 
@@ -2040,6 +2069,10 @@
     mkdirp "^1.0.4"
     rimraf "^3.0.2"
 
+"@opentelemetry/api@^1.0.1":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/api/-/api-1.8.0.tgz#5aa7abb48f23f693068ed2999ae627d2f7d902ec"
+
 "@protobufjs/aspromise@^1.1.1", "@protobufjs/aspromise@^1.1.2":
   version "1.1.2"
   resolved "https://registry.npmjs.org/@protobufjs/aspromise/-/aspromise-1.1.2.tgz"
@@ -2443,6 +2476,13 @@
   version "1.2.2"
   resolved "https://registry.npmjs.org/@types/minimist/-/minimist-1.2.2.tgz"
 
+"@types/node-fetch@^2.5.0":
+  version "2.6.11"
+  resolved "https://registry.yarnpkg.com/@types/node-fetch/-/node-fetch-2.6.11.tgz#9b39b78665dae0e82a08f02f4967d62c66f95d24"
+  dependencies:
+    "@types/node" "*"
+    form-data "^4.0.0"
+
 "@types/node-fetch@^2.5.10":
   version "2.6.2"
   resolved "https://registry.npmjs.org/@types/node-fetch/-/node-fetch-2.6.2.tgz"
@@ -2538,6 +2578,12 @@
 "@types/tsscmp@^1.0.0":
   version "1.0.0"
   resolved "https://registry.npmjs.org/@types/tsscmp/-/tsscmp-1.0.0.tgz"
+
+"@types/tunnel@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@types/tunnel/-/tunnel-0.0.3.tgz#f109e730b072b3136347561fc558c9358bb8c6e9"
+  dependencies:
+    "@types/node" "*"
 
 "@types/uglify-js@*":
   version "3.16.0"
@@ -2762,10 +2808,6 @@
   dependencies:
     tslib "^1.9.3"
 
-"@xmldom/xmldom@^0.7.0":
-  version "0.7.10"
-  resolved "https://registry.yarnpkg.com/@xmldom/xmldom/-/xmldom-0.7.10.tgz#b1f4a7dc63ac35b2750847644d5dacf5b4ead12f"
-
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
   resolved "https://registry.npmjs.org/@xtuc/ieee754/-/ieee754-1.2.0.tgz"
@@ -2855,18 +2897,9 @@ acorn@^8.2.4, acorn@^8.5.0, acorn@^8.7.0, acorn@^8.7.1:
   version "8.8.2"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.8.2.tgz#1b2f25db02af965399b9776b0c2c391276d37c4a"
 
-adal-node@0.2.3:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/adal-node/-/adal-node-0.2.3.tgz#87ed3dbed344f6e114e36bf18fe1c4e7d3cc6069"
-  dependencies:
-    "@xmldom/xmldom" "^0.7.0"
-    async "^2.6.3"
-    axios "^0.21.1"
-    date-utils "*"
-    jws "3.x.x"
-    underscore ">= 1.3.1"
-    uuid "^3.1.0"
-    xpath.js "~1.1.0"
+adaptivecards@1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/adaptivecards/-/adaptivecards-1.2.3.tgz#b69319c75bd214a5ec48119240c98449e7df685a"
 
 adler-32@~1.2.0:
   version "1.2.0"
@@ -2880,6 +2913,12 @@ agent-base@6, agent-base@^6.0.0, agent-base@^6.0.2:
   resolved "https://registry.npmjs.org/agent-base/-/agent-base-6.0.2.tgz"
   dependencies:
     debug "4"
+
+agent-base@^7.0.2:
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/agent-base/-/agent-base-7.1.1.tgz#bdbded7dfb096b751a2a087eeeb9664725b2e317"
+  dependencies:
+    debug "^4.3.4"
 
 agentkeepalive@^4.1.3:
   version "4.2.1"
@@ -3429,7 +3468,7 @@ async@2.6.0:
   dependencies:
     lodash "^4.14.0"
 
-async@^2.0.1, async@^2.6.3:
+async@^2.0.1:
   version "2.6.3"
   resolved "https://registry.npmjs.org/async/-/async-2.6.3.tgz"
   dependencies:
@@ -3457,7 +3496,7 @@ aws4@^1.8.0:
   version "1.11.0"
   resolved "https://registry.npmjs.org/aws4/-/aws4-1.11.0.tgz"
 
-axios@^0.21.1, axios@^0.21.4:
+axios@^0.21.4:
   version "0.21.4"
   resolved "https://registry.npmjs.org/axios/-/axios-0.21.4.tgz"
   dependencies:
@@ -3474,6 +3513,14 @@ axios@^0.25.0:
   resolved "https://registry.npmjs.org/axios/-/axios-0.25.0.tgz"
   dependencies:
     follow-redirects "^1.14.7"
+
+axios@^0.28.0:
+  version "0.28.1"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.28.1.tgz#2a7bcd34a3837b71ee1a5ca3762214b86b703e70"
+  dependencies:
+    follow-redirects "^1.15.0"
+    form-data "^4.0.0"
+    proxy-from-env "^1.1.0"
 
 babel-code-frame@^6.22.0:
   version "6.26.0"
@@ -3772,70 +3819,75 @@ boolbase@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/boolbase/-/boolbase-1.0.0.tgz"
 
-botbuilder-core@4.19.3:
-  version "4.19.3"
-  resolved "https://registry.yarnpkg.com/botbuilder-core/-/botbuilder-core-4.19.3.tgz#6e7069c23eb0e72f64931c79cd9c8cea50b167d5"
+botbuilder-core@4.22.2:
+  version "4.22.2"
+  resolved "https://registry.yarnpkg.com/botbuilder-core/-/botbuilder-core-4.22.2.tgz#f5c308f23e7ef8924707e6cfa12bfe8ce4f1b1e1"
   dependencies:
-    botbuilder-dialogs-adaptive-runtime-core "4.19.3-preview"
-    botbuilder-stdlib "4.19.3-internal"
-    botframework-connector "4.19.3"
-    botframework-schema "4.19.3"
+    botbuilder-dialogs-adaptive-runtime-core "4.22.2-preview"
+    botbuilder-stdlib "4.22.2-internal"
+    botframework-connector "4.22.2"
+    botframework-schema "4.22.2"
     uuid "^8.3.2"
-    zod "~1.11.17"
+    zod "^3.22.4"
 
-botbuilder-dialogs-adaptive-runtime-core@4.19.3-preview:
-  version "4.19.3-preview"
-  resolved "https://registry.yarnpkg.com/botbuilder-dialogs-adaptive-runtime-core/-/botbuilder-dialogs-adaptive-runtime-core-4.19.3-preview.tgz#f9fa6d77c8303c44336fd3a08119be0c4c1df7fc"
+botbuilder-dialogs-adaptive-runtime-core@4.22.2-preview:
+  version "4.22.2-preview"
+  resolved "https://registry.yarnpkg.com/botbuilder-dialogs-adaptive-runtime-core/-/botbuilder-dialogs-adaptive-runtime-core-4.22.2-preview.tgz#757b7f14216335a17f28527eb8328a531abe118b"
   dependencies:
     dependency-graph "^0.10.0"
 
-botbuilder-stdlib@4.19.3-internal:
-  version "4.19.3-internal"
-  resolved "https://registry.yarnpkg.com/botbuilder-stdlib/-/botbuilder-stdlib-4.19.3-internal.tgz#781a7671f4e07ae0efdf84035ca93c7973a2876d"
+botbuilder-stdlib@4.22.2-internal:
+  version "4.22.2-internal"
+  resolved "https://registry.yarnpkg.com/botbuilder-stdlib/-/botbuilder-stdlib-4.22.2-internal.tgz#862d396c95a0ebec80132f4d32431c805f960305"
 
 botbuilder@^4.7.1:
-  version "4.19.3"
-  resolved "https://registry.yarnpkg.com/botbuilder/-/botbuilder-4.19.3.tgz#208b2bd095cbf1e06f94d90997b5ab05b232d139"
+  version "4.22.2"
+  resolved "https://registry.yarnpkg.com/botbuilder/-/botbuilder-4.22.2.tgz#35057e5acb9c34ab229498aaf56fe3c40d0f7349"
   dependencies:
-    "@azure/ms-rest-js" "^2.6.1"
-    axios "^0.25.0"
-    botbuilder-core "4.19.3"
-    botbuilder-stdlib "4.19.3-internal"
-    botframework-connector "4.19.3"
-    botframework-streaming "4.19.3"
+    "@azure/core-http" "^3.0.2"
+    "@azure/msal-node" "^1.18.4"
+    axios "^0.28.0"
+    botbuilder-core "4.22.2"
+    botbuilder-stdlib "4.22.2-internal"
+    botframework-connector "4.22.2"
+    botframework-schema "4.22.2"
+    botframework-streaming "4.22.2"
     dayjs "^1.10.3"
     filenamify "^4.1.0"
     fs-extra "^7.0.1"
     htmlparser2 "^6.0.1"
     uuid "^8.3.2"
-    zod "~1.11.17"
+    zod "^3.22.4"
 
-botframework-connector@4.19.3:
-  version "4.19.3"
-  resolved "https://registry.yarnpkg.com/botframework-connector/-/botframework-connector-4.19.3.tgz#b652ea4a6c762f3b56bac604b2abe606781d586f"
+botframework-connector@4.22.2:
+  version "4.22.2"
+  resolved "https://registry.yarnpkg.com/botframework-connector/-/botframework-connector-4.22.2.tgz#4a884f067d44557dc7057b9b0e3313001dee772c"
   dependencies:
+    "@azure/core-http" "^3.0.2"
     "@azure/identity" "^2.0.4"
-    "@azure/ms-rest-js" "^2.6.1"
-    adal-node "0.2.3"
-    axios "^0.25.0"
+    "@azure/msal-node" "^1.18.4"
     base64url "^3.0.0"
-    botbuilder-stdlib "4.19.3-internal"
-    botframework-schema "4.19.3"
+    botbuilder-stdlib "4.22.2-internal"
+    botframework-schema "4.22.2"
     cross-fetch "^3.0.5"
+    https-proxy-agent "^7.0.2"
     jsonwebtoken "^9.0.0"
+    node-fetch "^2.6.7"
+    openssl-wrapper "^0.3.4"
     rsa-pem-from-mod-exp "^0.8.4"
-    zod "~1.11.17"
+    zod "^3.22.4"
 
-botframework-schema@4.19.3:
-  version "4.19.3"
-  resolved "https://registry.yarnpkg.com/botframework-schema/-/botframework-schema-4.19.3.tgz#4f3992f09d468299f8bd6263a01a1bbaf3cd8d01"
+botframework-schema@4.22.2:
+  version "4.22.2"
+  resolved "https://registry.yarnpkg.com/botframework-schema/-/botframework-schema-4.22.2.tgz#9a8748704eada397e99d4537e0591ad42bb1f794"
   dependencies:
+    adaptivecards "1.2.3"
     uuid "^8.3.2"
-    zod "~1.11.17"
+    zod "^3.22.4"
 
-botframework-streaming@4.19.3:
-  version "4.19.3"
-  resolved "https://registry.yarnpkg.com/botframework-streaming/-/botframework-streaming-4.19.3.tgz#46e98b4630b777d6c75e4c070a413aebbdf103bb"
+botframework-streaming@4.22.2:
+  version "4.22.2"
+  resolved "https://registry.yarnpkg.com/botframework-streaming/-/botframework-streaming-4.22.2.tgz#c57c9a3dcb0875bc68b7a575ee3207c52cbc018a"
   dependencies:
     "@types/node" "^10.17.27"
     "@types/ws" "^6.0.3"
@@ -4736,10 +4788,6 @@ date-fns@^1.30.1:
   version "1.30.1"
   resolved "https://registry.npmjs.org/date-fns/-/date-fns-1.30.1.tgz"
 
-date-utils@*:
-  version "1.2.21"
-  resolved "https://registry.npmjs.org/date-utils/-/date-utils-1.2.21.tgz"
-
 dateformat@^3.0.3:
   version "3.0.3"
   resolved "https://registry.npmjs.org/dateformat/-/dateformat-3.0.3.tgz"
@@ -4754,7 +4802,7 @@ debug@2.6.9, debug@^2.1.2, debug@^2.2.0, debug@^2.3.3:
   dependencies:
     ms "2.0.0"
 
-debug@4, debug@^4.1.0, debug@^4.1.1, debug@^4.3.3:
+debug@4, debug@^4.1.0, debug@^4.1.1, debug@^4.3.3, debug@^4.3.4:
   version "4.3.4"
   resolved "https://registry.npmjs.org/debug/-/debug-4.3.4.tgz"
   dependencies:
@@ -6034,6 +6082,10 @@ follow-redirects@^1.0.0, follow-redirects@^1.14.0, follow-redirects@^1.14.4, fol
   version "1.14.9"
   resolved "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.14.9.tgz"
 
+follow-redirects@^1.15.0:
+  version "1.15.6"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.6.tgz#7f815c0cda4249c74ff09e95ef97c23b5fd0399b"
+
 for-each@^0.3.3:
   version "0.3.3"
   resolved "https://registry.npmjs.org/for-each/-/for-each-0.3.3.tgz"
@@ -6963,6 +7015,13 @@ https-proxy-agent@5, https-proxy-agent@^5.0.0:
   resolved "https://registry.npmjs.org/https-proxy-agent/-/https-proxy-agent-5.0.0.tgz"
   dependencies:
     agent-base "6"
+    debug "4"
+
+https-proxy-agent@^7.0.2:
+  version "7.0.4"
+  resolved "https://registry.yarnpkg.com/https-proxy-agent/-/https-proxy-agent-7.0.4.tgz#8e97b841a029ad8ddc8731f26595bad868cb4168"
+  dependencies:
+    agent-base "^7.0.2"
     debug "4"
 
 human-signals@^2.1.0:
@@ -8613,7 +8672,7 @@ jwa@^2.0.0:
     ecdsa-sig-formatter "1.0.11"
     safe-buffer "^5.0.1"
 
-jws@3.x.x, jws@^3.1.5, jws@^3.2.2:
+jws@^3.1.5, jws@^3.2.2:
   version "3.2.2"
   resolved "https://registry.npmjs.org/jws/-/jws-3.2.2.tgz"
   dependencies:
@@ -9795,6 +9854,10 @@ open@^8.0.9:
     is-docker "^2.1.1"
     is-wsl "^2.2.0"
 
+openssl-wrapper@^0.3.4:
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/openssl-wrapper/-/openssl-wrapper-0.3.4.tgz#c01ec98e4dcd2b5dfe0b693f31827200e3b81b07"
+
 opn@^5.5.0:
   version "5.5.0"
   resolved "https://registry.npmjs.org/opn/-/opn-5.5.0.tgz"
@@ -10302,6 +10365,10 @@ process-nextick-args@~1.0.6:
   version "1.0.7"
   resolved "https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-1.0.7.tgz"
 
+process@^0.11.10:
+  version "0.11.10"
+  resolved "https://registry.yarnpkg.com/process/-/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
+
 progress@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/progress/-/progress-2.0.0.tgz"
@@ -10387,7 +10454,7 @@ proxy-agent@^5.0.0:
     proxy-from-env "^1.0.0"
     socks-proxy-agent "^5.0.0"
 
-proxy-from-env@^1.0.0:
+proxy-from-env@^1.0.0, proxy-from-env@^1.1.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/proxy-from-env/-/proxy-from-env-1.1.0.tgz"
 
@@ -12350,14 +12417,6 @@ tough-cookie@^2.3.3, tough-cookie@^2.3.4, tough-cookie@~2.5.0:
     psl "^1.1.28"
     punycode "^2.1.1"
 
-tough-cookie@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-3.0.1.tgz#9df4f57e739c26930a018184887f4adb7dca73b2"
-  dependencies:
-    ip-regex "^2.1.0"
-    psl "^1.1.28"
-    punycode "^2.1.1"
-
 tough-cookie@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/tough-cookie/-/tough-cookie-4.0.0.tgz"
@@ -12422,6 +12481,10 @@ tslib@^2.2.0:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.5.0.tgz#42bfed86f5787aeb41d031866c8f402429e0fddf"
 
+tslib@^2.6.2:
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.6.2.tgz#703ac29425e7b37cd6fd456e92404d46d1f3e4ae"
+
 tsscmp@^1.0.6:
   version "1.0.6"
   resolved "https://registry.npmjs.org/tsscmp/-/tsscmp-1.0.6.tgz"
@@ -12432,7 +12495,7 @@ tunnel-agent@^0.6.0:
   dependencies:
     safe-buffer "^5.0.1"
 
-tunnel@0.0.6:
+tunnel@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/tunnel/-/tunnel-0.0.6.tgz#72f1314b34a5b192db012324df2cc587ca47f92c"
 
@@ -12543,7 +12606,7 @@ underscore.string@^3.3.5:
     sprintf-js "^1.0.3"
     util-deprecate "^1.0.2"
 
-"underscore@>= 1.3.1", underscore@^1.10.2, underscore@^1.8.3, underscore@^1.9.1:
+underscore@^1.10.2, underscore@^1.8.3, underscore@^1.9.1:
   version "1.12.1"
   resolved "https://registry.npmjs.org/underscore/-/underscore-1.12.1.tgz"
 
@@ -13284,10 +13347,6 @@ xmlchars@^2.2.0:
   version "2.2.0"
   resolved "https://registry.npmjs.org/xmlchars/-/xmlchars-2.2.0.tgz"
 
-xpath.js@~1.1.0:
-  version "1.1.0"
-  resolved "https://registry.npmjs.org/xpath.js/-/xpath.js-1.1.0.tgz"
-
 xregexp@2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/xregexp/-/xregexp-2.0.0.tgz"
@@ -13488,6 +13547,6 @@ zlibjs@^0.3.1:
   version "0.3.1"
   resolved "https://registry.npmjs.org/zlibjs/-/zlibjs-0.3.1.tgz"
 
-zod@~1.11.17:
-  version "1.11.17"
-  resolved "https://registry.yarnpkg.com/zod/-/zod-1.11.17.tgz#2aae9e91fc66128116ae9844e8f416a95f453f8e"
+zod@^3.22.4:
+  version "3.23.5"
+  resolved "https://registry.yarnpkg.com/zod/-/zod-3.23.5.tgz#c7b7617d017d4a2f21852f533258d26a9a5ae09f"

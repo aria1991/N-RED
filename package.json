@@ -135,7 +135,7 @@
     "cli-table": "^0.3.1",
     "cloudinary": "^1.27.1",
     "compromise": "10.7.1",
-    "dialogflow": "^1.2.0",
+    "dialogflow": "^4.0.3",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.4.0",
     "express": "^4.17.1",
